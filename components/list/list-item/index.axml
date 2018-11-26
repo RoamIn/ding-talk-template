@@ -1,0 +1,3 @@
+<view class="e-list-item {{className}}">
+    <slot />
+</view>

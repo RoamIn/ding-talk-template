@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Status",
+  "usingComponents": {
+    "status": "/components/status/index"
+  }
+}

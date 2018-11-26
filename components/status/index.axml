@@ -1,0 +1,4 @@
+<view class="status {{status}} {{className}}">
+    <view class="dot"></view>
+    <slot></slot>
+</view>

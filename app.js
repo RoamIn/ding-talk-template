@@ -1,16 +1,13 @@
 App({
   onLaunch(options) {
-    console.log('App Launch', options);
-    console.log('getSystemInfoSync', dd.getSystemInfoSync());
-    console.log('SDKVersion', dd.SDKVersion);
+    console.log('App Launch', JSON.stringify(options, null, 4))
+    console.log('getSystemInfoSync', dd.getSystemInfoSync())
+    console.log('SDKVersion', dd.SDKVersion)
   },
   onShow() {
-    console.log('App Show');
+    console.log('App Show')
   },
   onHide() {
-    console.log('App Hide');
-  },
-  globalData: {
-    hasLogin: false,
-  },
-});
+    console.log('App Hide')
+  }
+})

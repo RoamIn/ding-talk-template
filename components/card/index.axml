@@ -1,0 +1,8 @@
+<view class="e-card">
+  <view class="e-card-title" a:if="{{$slots.title}}">
+    <slot name="title" />
+  </view>
+  <view class="e-card-body">
+    <slot />
+  </view>
+</view>

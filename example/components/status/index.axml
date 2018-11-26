@@ -1,0 +1,17 @@
+<list>
+    <list-item>
+        <status status="success">success</status>
+    </list-item>
+    <list-item>
+        <status status="danger">danger</status>
+    </list-item>
+    <list-item>
+        <status status="warning">warning</status>
+    </list-item>
+    <list-item>
+        <status status="disabled">disabled</status>
+    </list-item> 
+    <list-item>
+        <status status="running">running</status>
+    </list-item>
+</list>

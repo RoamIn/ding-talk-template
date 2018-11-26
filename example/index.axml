@@ -1,0 +1,7 @@
+<view>
+    <list>
+        <list-item a:for="{{components}}">
+            <navigator url="{{item.url}}">{{ item.name }}</navigator>
+        </list-item>
+    </list>    
+</view>
