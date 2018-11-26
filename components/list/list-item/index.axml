@@ -1,3 +1,18 @@
-<view class="e-list-item {{className}}">
-    <slot />
+<view
+	class="e-list-item e-list-{{align}} {{multipleLine ? 'e-list-multiple' : ''}} {{last ? 'last': ''}} {{className}}"
+	hover-class="{{disabled ? '' : 'e-list-item-hover'}}"
+	onTap="onItemTap"
+	data-index="{{index}}"
+>
+	<image a:if={{thumb}} class="e-list-thumb" src="{{thumb}}" mode="scaleToFill" />
+	<view class="e-list-line {{wrap ? 'e-list-wrap' : ''}}">
+		<view class="e-list-content">
+			<slot />
+		</view>
+		<view a:if={{$slots.extra}} class="e-list-extra" >
+			<slot name="extra" />
+		</view>
+		<view a:if={{arrow}} class="e-list-arrow-2" />
+		<view class="e-list-line-bottom" />
+	</view>
 </view>

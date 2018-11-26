@@ -1,7 +1,10 @@
-<view>
+<page>
     <list>
-        <list-item a:for="{{components}}">
+        <list-item arrow a:for="{{components}}" key="{{index}}">
             <navigator url="{{item.url}}">{{ item.name }}</navigator>
         </list-item>
-    </list>    
-</view>
+    </list>
+    <view slot="footer">
+        <button type="primary">Button</button>
+    </view>
+</page>

@@ -2,6 +2,7 @@
   "defaultTitle": "Example",
   "usingComponents": {
     "list": "/components/list/index",
-    "list-item": "/components/list/list-item/index"
+    "list-item": "/components/list/list-item/index",
+    "page": "/components/page/index"
   }
 }

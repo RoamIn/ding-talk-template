@@ -1,6 +1,6 @@
 App({
   onLaunch(options) {
-    console.log('App Launch', JSON.stringify(options, null, 4))
+    console.log('App Launch', options)
     console.log('getSystemInfoSync', dd.getSystemInfoSync())
     console.log('SDKVersion', dd.SDKVersion)
   },

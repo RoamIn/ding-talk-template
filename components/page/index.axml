@@ -1,0 +1,6 @@
+<view class="e-page">
+    <slot />
+    <view class="e-page-footer" a:if="{{$slots.footer}}">
+        <slot name="footer" />
+    </view>
+</view>

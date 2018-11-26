@@ -1,0 +1,67 @@
+<view class="e-tabs {{className}}" style="{{style}}" >
+  <view class="e-tabs-tab-bar-wrap">
+    <view class="e-tabs-bar">
+      <view class="e-tabs-bar-content-wrap">
+        <!-- <view class="e-tabs-scroll-left"></view>
+        <view class="e-tabs-scroll-right"></view> -->
+        <view 
+          a:if="{{fixed}}"
+          class="e-tabs-bar-content-fixed"
+        >
+          <block a:for="{{tabs}}">
+              <view
+                data-index="{{index}}"
+                key="tabs-item-{{index}}"
+                onTap="handleTabClick"
+                style="{{
+                  backgroundColor: tabBarBackgroundColor,
+                  color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
+                  width: tabWidth * 100 + '%',
+                  borderBottomColor: index === current ? tabBarUnderlineColor : '',
+                }}"
+                class="e-tabs-bar-tab">
+                <view class="e-tabs-bar-title" >
+                  {{item.title}}
+                </view>
+              </view>
+            </block>
+        </view>
+        <scroll-view
+          a:if="{{!fixed}}"
+          scroll-left="{{scrollInit}}"
+          scroll-x="{{true}}"
+          scroll-with-animation="{{true}}"
+          class="e-tabs-bar-content">
+          <block a:for="{{tabs}}">
+            <view
+              data-index="{{index}}"
+              key="tabs-item-{{index}}"
+              onTap="handleTabClick"
+              style="{{
+                backgroundColor: tabBarBackgroundColor,
+                color: index === current ? tabBarActiveTextColor: tabBarInactiveTextColor,
+                width: tabWidth * 100 + '%',
+                borderBottomColor: index === current ? tabBarUnderlineColor : '',
+              }}"
+              class="e-tabs-bar-tab">
+              <view class="e-tabs-bar-title" >
+                {{item.title}}
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="e-tabs-plus-wrap {{showPlus ? 'show' : ''}}">
+        <view class="e-tabs-plus" onTap="handlePlusClick"></view>
+      </view>
+    </view>
+    <swiper
+      current="{{current}}"
+      interval="99999999"
+      autoplay="{{true}}"
+      onChange="handleSwiperChange"
+      class="e-tabs-content-wrap">
+      <slot></slot>
+    </swiper>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="e-filter-{{show ? 'show' : 'hide'}} {{className}}" disable-scroll="{{false}}">
+  <view class="e-filter-mask" />
+  <view class="e-filter-document">
+    <view class="e-filter-content" onChange="{{callBackFn}}">
+      <view class="e-filter-list">
+        <slot/>
+      </view>
+      <view class="e-filter-btn" a:if="{{singleSelect}}">
+        <button type="default" class="e-filter-default" onTap="resetFn">重置</button>
+        <button type="primary" class="e-filter-primary" onTap="confirmFn">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

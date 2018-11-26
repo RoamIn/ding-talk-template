@@ -1,0 +1,20 @@
+<view class="e-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{true}}">
+	<view class="e-modal-mask" />
+	<view class="e-modal-document {{advice === true ? 'e-modal-document-advice' : '' }}">
+		<view class="e-modal {{className}}">
+			<view a:if="{{topImage}}" class="e-modal-image e-modal-image-{{topImageSize}}">
+				<image src="{{topImage}}" />
+			</view>
+			<view class="e-modal-header" a:if="{{$slots.header}}">
+				<slot name="header" />
+			</view>
+			<view class="e-modal-body">
+				<slot />
+			</view>
+			<view class="e-modal-footer" hover-class="e-modal-footer-active" a:if="{{$slots.footer}}" onTap="onModalClick">
+				<slot name="footer" />
+			</view>
+			<view class="e-modal-close" hover-class="e-modal-close-active" a:if="{{showClose}}" onTap="onModalClose" />
+		</view>
+	</view>
+</view>

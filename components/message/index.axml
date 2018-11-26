@@ -1,0 +1,27 @@
+<view class="e-message {{className}}">
+  <icon class="e-icon" size="64" type="{{type}}" />
+  <view class="e-message-main">
+    {{title}}
+  </view>
+  <view a:if="{{subTitle}}" class="e-message-sub">
+    {{subTitle}}
+  </view>
+</view>
+<view class="e-button-wrap" a:if="{{mainButton || subButton}}">
+  <button
+    a:if="{{mainButton}}"
+    type="primary"
+    disabled="{{mainButton.disabled}}"
+    onTap="tapMain"
+  >
+    {{mainButton.buttonText}}
+  </button>
+  <button
+    a:if="{{subButton}}"
+    type="default"
+    disabled="{{subButton.disabled}}"
+    onTap="tapSub"
+  >
+    {{subButton.buttonText}}
+  </button>
+</view>

@@ -1,0 +1,27 @@
+<view class="e-swipe {{swiping ? 'e-swiping' : ''}} {{className}}">
+  <block a:if="{{right.length > 0}}">
+    <view class="e-swipe-right">
+      <block a:for="{{right}}">
+        <view
+          class="e-swipe-btn e-swipe-btn-{{item.type}}"
+          onTap="onItemClick"
+          data-index="{{index}}"
+          key="swipe-item-{{index}}"
+        >
+          {{item.text}}
+        </view>
+      </block>
+    </view>
+  </block>
+  <view
+    class="e-swipe-content"
+    onTap="onSwipeTap"
+    onTouchStart="onSwipeStart"
+    onTouchEnd="onSwipeEnd"
+    onTouchMove="onSwipeMove"
+    data-type="content"
+    style="left: {{leftPos}}px;"
+  >
+    <slot />
+  </view>
+</view>

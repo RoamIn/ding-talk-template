@@ -1,0 +1,15 @@
+<view class="e-segment {{className}} {{disabled ? 'e-segment-disabled' : ''}}" style="{{style}}" >
+  <block a:for="{{values}}">
+    <view 
+      key="e-segment-item-{{index}}"
+      class="e-segment-item {{ current === index ? 'e-segment-item-selected' : '' }}" 
+      hover-class="e-segment-item-active"
+      onTap="handleItemTap"
+      data-index="{{index}}"
+      data-value="{{item}}"
+    >
+      <view class="e-segment-item-mask" ></view>
+      {{item}}
+    </view>
+  </block>
+</view>

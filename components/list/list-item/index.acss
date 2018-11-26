@@ -1,12 +1,120 @@
 .e-list-item {
   display: flex;
+  align-items: center;
   background: #fff;
-  padding: 28rpx 0 28rpx 20rpx;
-  font-size: 32rpx;
-  line-height: 1.5;
-  color: #333;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #1a1f24;
 }
 
-.e-list-item + .e-list-item {
-  border-top: 1px solid #ddd;
+/* hover 样式 */
+.e-list-item-hover {
+  background-color: #ddd;
+}
+
+.e-list-thumb {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.e-list-line {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding-right: 15px;
+  min-height: 47px;
+  overflow: hidden;
+}
+
+.e-list-content,
+.e-list-extra {
+  line-height: 1.5;
+  width: auto;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.e-list-content {
+  flex: 1;
+  color: #000;
+  font-size: 17px;
+  text-align: left;
+}
+
+.e-list-extra {
+  flex-basis: 36%;
+  color: #888;
+  font-size: 16px;
+  text-align: right;
+}
+
+.e-list-brief {
+  color: #888;
+  font-size: 15px;
+}
+
+.e-list-wrap .e-list-content,
+.e-list-wrap .e-list-extra {
+  white-space: normal;
+}
+
+.e-list-arrow-2 {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-left: 8px;
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="16" height="26" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="UI-KIT_基础元件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="9.9基础元件" transform="translate(-5809.000000, -8482.000000)" fill="#C7C7CC"><polygon id="Disclosure-Indicator" points="5811 8482 5809 8484 5820.5 8495 5809 8506 5811 8508 5825 8495"></polygon></g></g></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.e-list-arrow-empty {
+  visibility: hidden;
+}
+
+.e-list-line-bottom {
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1rpx solid #e3e3e4;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+}
+
+/* 子元素垂直对齐 */
+.e-list-top .e-list-line {
+  align-items: flex-start;
+}
+
+.e-list-middle .e-list-line {
+  align-items: center;
+}
+
+.e-list-bottom .e-list-line {
+  align-items: flex-end;
+}
+
+/* 多行 */
+.e-list-multiple .e-list-line {
+  padding: 6px 15px 6px 0;
+}
+
+.e-list-multiple .e-list-thumb {
+  width: 36px;
+  height: 36px;
+}
+
+/* 最后一行 */
+.e-list-item.last .e-list-line-bottom{
+  border-bottom: none;
 }

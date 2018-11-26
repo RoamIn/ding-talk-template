@@ -1,0 +1,9 @@
+<view class="e-notice" a:if="{{show}}">
+  <view class="e-notice-content">
+    <slot></slot>
+  </view>
+  <view class="e-notice-operation" onTap="onTap">
+    <view a:if="{{action !== ''}}" class="e-notice-operation-text" >{{action}}</view>
+    <view a:else class="e-notice-{{mode}}"></view>
+  </view>
+</view>

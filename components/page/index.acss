@@ -1,0 +1,18 @@
+.e-page {
+    min-height: 100vh;
+    font-size: 24rpx;
+}
+
+.e-page-footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16rpx;
+    border-top: 1rpx solid #ddd;
+    background-color: #fff;
+}

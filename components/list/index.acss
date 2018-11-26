@@ -1,3 +1,17 @@
-.e-list {
-    
+.e-list-header,
+.e-list-footer {
+  font-size: 14px;
+  color: #888;
+}
+
+.e-list-header {
+  padding: 16px 16px 8px;
+}
+
+.e-list-body {
+  /* border-bottom: 1rpx solid #ddd; */
+}
+
+.e-list-footer {
+  padding: 8px 16px 16px 16px;
 }

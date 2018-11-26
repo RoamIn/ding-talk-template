@@ -1,0 +1,28 @@
+<view
+	class="e-input-item {{last ? 'last': ''}} {{className}}"
+>
+	<view class="e-input-line">
+    <view a:if="{{$slots.$default}}" class="e-input-label {{labelCls}}">
+      <slot />
+    </view>
+    <input
+      class="e-input-content {{inputCls}}"
+      value="{{value}}"
+      name="{{name}}"
+      type="{{type}}"
+      password="{{password}}"
+      placeholder="{{placeholder}}"
+      placeholderClass="{{placeholderClass}}"
+      placeholderStyle="{{placeholderStyle}}"
+      disabled="{{disabled}}"
+      maxlength="{{maxlength}}"
+      focus="{{focus}}"
+      onInput="onInput"
+      onConfirm="onConfirm"
+      onFocus="onFocus"
+      onBlur="onBlur"
+    />
+    <slot name="extra" />
+		<view class="e-input-line-bottom" />
+	</view>
+</view>

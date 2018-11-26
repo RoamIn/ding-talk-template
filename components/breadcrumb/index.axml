@@ -1,0 +1,20 @@
+<view class="e-breadcrumb {{className}}" style="{{style}}" >
+  <scroll-view 
+    class="e-breadcrumb-content" 
+    scroll-x="{{true}}" 
+    scroll-left="{{scrollLeft}}"
+  >
+    <block a:for="{{values}}">
+      <view 
+        key="e-breadcrumb-item-{{index}}"
+        class="e-breadcrumb-item {{ values.length - 1 === index ? 'e-breadcrumb-item-selected' : '' }}" 
+        onTap="handleItemTap"
+        data-index="{{index}}"
+        data-value="{{item}}"
+      >
+        {{item}}
+      </view>
+      <view class="e-breadcrumb-divider" a:if="{{values.length - 1 !== index}}" />
+    </block>
+  </scroll-view>
+</view>

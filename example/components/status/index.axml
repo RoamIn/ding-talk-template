@@ -1,17 +1,10 @@
-<list>
-    <list-item>
-        <status status="success">success</status>
-    </list-item>
-    <list-item>
-        <status status="danger">danger</status>
-    </list-item>
-    <list-item>
-        <status status="warning">warning</status>
-    </list-item>
-    <list-item>
-        <status status="disabled">disabled</status>
-    </list-item> 
-    <list-item>
-        <status status="running">running</status>
-    </list-item>
-</list>
+<page>
+    <list>
+        <list-item a:for="{{statusList}}">
+            <status status="{{item}}">{{item}}</status>
+        </list-item>
+    </list>
+     <view slot="footer">
+        <button type="primary">Button</button>
+    </view>
+</page>

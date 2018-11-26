@@ -1,39 +1,35 @@
-.status {
+.e-status {
     display: inline;
 }
 
-.status .dot {
+.e-status .dot {
     display: inline-block;
-    margin: 0 8rpx;
-    width: 24rpx;
-    height: 24rpx;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     vertical-align: middle;
 }
 
-.status.success .dot {
+.e-status.success .dot {
     background: rgba(25, 190, 107, .9);
-    box-shadow: 0 0 8rpx rgb(25, 190, 107);
+    box-shadow: 0 0 8px rgb(25, 190, 107);
 }
-
-.status.danger .dot {
-    background: rgba(237, 63, 20, .9);
-    box-shadow: 0 0 8rpx rgb(237, 63, 20);
+.e-status.danger .dot {
+    background: rgba(235, 82, 74, .9);
+    box-shadow: 0 0 8px rgb(235, 82, 74);
 }
-
-.status.warning .dot {
-    background: rgba(255, 160, 0, .9);
-    box-shadow: 0 0 8rpx rgb(255, 160, 0);
+.e-status.warning .dot {
+    background: rgba(240, 153, 81, .9);
+    box-shadow: 0 0 8px rgb(240, 153, 81);
 }
-
-.status.disabled .dot {
+.e-status.disabled .dot {
     background: rgba(187, 190, 196, .9);
-    box-shadow: 0 0 8rpx rgb(187, 190, 196);
+    box-shadow: 0 0 8px rgb(187, 190, 196);
 }
-
-.status.running .dot {
+.e-status.running .dot {
     background: rgba(25, 190, 107, .9);
-    box-shadow: 0 0 8rpx rgb(25, 190, 107);
+    box-shadow: 0 0 8px rgb(25, 190, 107);
     opacity: .2;
     animation: shine 1.2s linear infinite;
 }

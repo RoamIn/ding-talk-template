@@ -1,0 +1,32 @@
+.e-swipe {
+  position: relative;
+  overflow: hidden;
+}
+.e-swipe-content {
+  position: relative;
+  transition: all 250ms;
+}
+.e-swiping .e-swipe-content {
+  transition: none;
+}
+.e-swipe-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  right: 0;
+}
+.e-swipe-btn {
+  flex: 1;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fff;
+}
+.e-swipe-btn-delete {
+  background-color: rgb(244, 51, 60);
+}
+.e-swipe-btn-edit {
+  background-color: #108ee9;
+}

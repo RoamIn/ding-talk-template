@@ -1,8 +1,19 @@
-<view class="e-card">
-  <view class="e-card-title" a:if="{{$slots.title}}">
-    <slot name="title" />
-  </view>
+<view
+  class="e-card"
+  hover-class="e-card-active"
+  onTap="onCardClick"
+>
   <view class="e-card-body">
-    <slot />
+    <image a:if="{{thumb}}" src="{{thumb}}" class="e-card-thumb" />
+    <view class="e-card-content">
+      <view a:if="{{!thumb || (thumb && footer)}}" class="e-card-title">{{title}}</view>
+      <view class="e-card-subtitle">{{subTitle}}</view>
+      <view a:if="{{!footer && thumb}}" class="e-card-title">{{title}}</view>
+    </view>
+    <view class="e-card-arrow" aria-hidden="true" />
+  </view>
+  <view a:if="{{footer}}" class="e-card-footer">
+    <image a:if="{{footerImg}}" src="{{footerImg}}" />
+    {{footer}}
   </view>
 </view>

@@ -1,0 +1,18 @@
+<view class="e-grid e-grid-{{columnNum}} {{hasLine ? '' : 'e-grid-no-line'}}" >
+	<block a:for="{{list}}">
+		<view
+			style="width:{{100/(columnNum)}}%; padding-top:{{columnNum !== 2 ? 100/(columnNum) + '%' : '60px'}};"
+			class="e-grid-item {{index >= bottomIndex ? 'e-grid-bottom' : ''}} {{(index + 1) % columnNum === 0 ? 'e-grid-right' : ''}}"
+			onTap="onGridItemClick"
+			data-index={{index}}
+			key="grid-item-{{index}}"
+		>
+			<view class="e-grid-item-wrapper">
+				<view class="e-grid-icon-container {{circular && columnNum === 4 ? 'circular' : ''}}">
+					<image src="{{item.icon}}" class="e-grid-icon" mode="aspectFit" />
+				</view>
+				<text class="e-grid-text">{{item.text}}</text>
+			</view>
+		</view>
+	</block>
+</view>
