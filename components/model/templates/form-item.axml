@@ -1,0 +1,42 @@
+<template name="form-item">
+    <view class="e-form-item">
+        <view class="e-form-item-label" a:if="{{field.label}}">{{field.label}}</view>
+        <view class="e-form-item-content">
+            <block a:if="{{field.type === 'input'}}">
+                <input type="text" placeholder="Input" auto-focus />
+            </block>
+            <block a:elif="{{field.type === 'textarea'}}">
+                <textarea placeholder="placeholder" maxlength="200" />
+            </block>
+            <block a:elif="{{field.type === 'checkbox-group'}}">
+                <checkbox-group>
+                    <label class="checkbox" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
+                        <checkbox value="{{option.value || option}}" />{{option.text || option}}                            
+                    </label>
+                </checkbox-group>
+            </block>
+            <block a:elif="{{field.type === 'radio-group'}}">
+                <radio-group>
+                    <label class="radio" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
+                        <radio value="{{option.value || option}}" />{{option.text || option}}                            
+                    </label>
+                </radio-group>
+            </block>
+            <block a:elif="{{field.type === 'date'}}">
+                <view class="date">
+                    >
+                </view>
+            </block>
+            <block a:elif="{{field.type === 'switch'}}">
+                <view class="switch">
+                    <switch checked color="{{field.props.color || '#41d551'}}" />
+                </view>
+            </block>
+            <block a:elif="{{field.type === 'slider'}}">
+                <view class="slider">
+                    <slider min={{field.props.min}} max={{field.props.max}} step={{field.props.step}} show-value="{{field.props.showValue}}" />
+                </view>
+            </block>
+        </view>
+    </view>
+</template>

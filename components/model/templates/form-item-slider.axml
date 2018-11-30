@@ -1,0 +1,5 @@
+<template name="form-item-slider">
+    <view class="slider">
+        <slider min={{field.props.min}} max={{field.props.max}} step={{field.props.step}} show-value="{{field.props.showValue}}" />
+    </view>
+</template>

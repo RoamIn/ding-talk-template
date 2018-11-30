@@ -1,5 +1,6 @@
 {
   "pages": [
+    "example/components/model/index",
     "example/index",
     "example/components/status/index"
   ],

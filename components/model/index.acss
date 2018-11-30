@@ -1,0 +1,47 @@
+.e-form {
+    padding: 8px 16px;
+}
+
+/* group */
+.e-form-group-title {
+    color: #444;
+}
+.e-form-group-content {
+    padding: 8px 16px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* item */
+.e-form-item {
+   margin-bottom: 16px;
+}
+.e-form-item-label {
+    padding: 8px 0;
+}
+.e-form-item-content {
+    
+}
+
+/* element */
+.e-form-item-content input,
+.e-form-item-content textarea {
+    display: block;
+    padding: 5px 10px;
+    border: 1rpx solid #e3e3e4;
+    border-radius: 4px;
+}
+.e-form-item-content .checkbox,
+.e-form-item-content .radio {
+    display: block;
+}
+.e-form-item-content .checkbox + .checkbox,
+.e-form-item-content .radio + .radio,
+.e-form-item-content .switch + .switch {
+    margin-top: 10px;
+}
+.e-form-item-content .slider {
+    padding: 0 11px;
+}
+.e-form-item-content .slider slider{
+}

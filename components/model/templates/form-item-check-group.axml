@@ -1,0 +1,7 @@
+<template name="form-item-checkbox-group">
+    <checkbox-group>
+        <label class="checkbox" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
+            <checkbox value="{{option.value || option}}" />{{option.text || option}}                                                
+        </label>
+    </checkbox-group>
+</template>

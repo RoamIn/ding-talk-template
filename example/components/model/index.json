@@ -1,0 +1,6 @@
+{
+    "defaultTitle": "Model",
+    "usingComponents": {
+        "model": "/components/model/index"
+    }
+}

@@ -1,0 +1,5 @@
+<template name="form-item-switch">
+    <view class="switch">
+        <switch checked color="{{field.props.color || '#41d551'}}" />
+    </view>
+</template>

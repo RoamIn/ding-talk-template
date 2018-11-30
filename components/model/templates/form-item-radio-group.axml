@@ -1,0 +1,7 @@
+<template name="form-item-radio-group">
+    <radio-group>
+        <label class="radio" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
+            <radio value="{{option.value || option}}" />{{option.text || option}}                                                
+        </label>
+    </radio-group>
+</template>

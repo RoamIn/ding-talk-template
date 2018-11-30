@@ -1,0 +1,3 @@
+<view>
+  <model model="{{model}}" schema="{{schema}}" />
+</view>
