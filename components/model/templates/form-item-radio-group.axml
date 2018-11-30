@@ -1,7 +1,15 @@
 <template name="form-item-radio-group">
-    <radio-group>
-        <label class="radio" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
-            <radio value="{{option.value || option}}" />{{option.text || option}}                                                
+    <radio-group
+        name="{{field.modelKey || ''}}"
+        data-name="{{field.modelKey || ''}}"
+        onChange="onChange"
+        >
+        <label class="radio" a:for="{{field.props.options}}" a:key="label-{{index}}" a:for-item="option">
+            <radio
+                value="{{option.value || option}}"
+                checked="{{model[field.modelKey] === (option.value || option)}}"
+                />
+            <text class="radio-text">{{option.text || option}}</text>                                             
         </label>
     </radio-group>
 </template>

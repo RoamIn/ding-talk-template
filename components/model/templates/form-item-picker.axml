@@ -1,0 +1,15 @@
+<template name="form-item-picker">
+    <picker
+        name="{{field.modelKey}}"
+        data-name="{{field.modelKey}}"
+        value="{{model[field.modelKey]}}"
+        range="{{field.props.range}}"
+        range-key="{{field.props.rangeKey}}"
+        disabled="{{field.props.disabled || false}}"
+        onChange="onChange"
+        >
+        <view class="picker">
+            当前选择：{{model[field.modelKey]}}
+        </view>
+    </picker>
+</template>

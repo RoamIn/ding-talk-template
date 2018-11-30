@@ -2,9 +2,12 @@ Page({
   data: {
     model: {
       name: 'Jon',
-      gender: 'Man',
-      age: 18,
-      description: ''
+      gender: 'Male',
+      look: 5,
+      nationality: '中国',
+      days: ['Mon', 'Sat', 'Fri'],
+      email: 'my@email.com',
+      description: 'balabala...'
     },
     schema: {
       groups: [
@@ -34,12 +37,24 @@ Page({
               }
             },
             {
-              label: '熟练程度(%)',
-              modelKey: 'age',
+              label: '上课时间',
+              modelKey: 'days',
+              type: 'checkbox-group',
+              props: {
+                options: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+              },
+              rules: {
+                required: true
+              }
+            },
+            {
+              label: '颜值',
+              modelKey: 'look',
               type: 'slider',
+              tips: '颜值即正义',
               props: {
                 min: 0,
-                max: 150,
+                max: 10,
                 step: 1,
                 showValue: true
               },
@@ -48,13 +63,29 @@ Page({
               }
             },
             {
-              label: '生日',
-              modelKey: 'age',
-              type: 'date',
+              label: '国籍',
+              modelKey: 'nationality',
+              type: 'picker',
               props: {
-                min: 0,
-                max: 150,
-                step: 1
+                rangeKey: 'name',
+                range: [
+                  {
+                    id: 1,
+                    name: '美国'
+                  },
+                  {
+                    id: 2,
+                    name: '中国'
+                  },
+                  {
+                    id: 3,
+                    name: '巴西'
+                  },
+                  {
+                    id: 4,
+                    name: '日本'
+                  }
+                ]
               },
               rules: {
                 required: true
@@ -72,6 +103,7 @@ Page({
               label: '简介',
               modelKey: 'description',
               type: 'textarea',
+              tips: '讲讲你的兴趣、爱好啥的',
               props: {
                 maxlength: 100
               }

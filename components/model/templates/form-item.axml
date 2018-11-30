@@ -1,42 +1,24 @@
+<import src="./form-item-input.axml"/>
+<import src="./form-item-textarea.axml"/>
+<import src="./form-item-checkbox-group.axml"/>
+<import src="./form-item-radio-group.axml"/>
+<import src="./form-item-picker.axml"/>
+<import src="./form-item-switch.axml"/>
+<import src="./form-item-slider.axml"/>
+
 <template name="form-item">
     <view class="e-form-item">
-        <view class="e-form-item-label" a:if="{{field.label}}">{{field.label}}</view>
+        <view class="e-form-item-label" a:if="{{field.label}}">{{field.label}}                
+        </view>
+        <view class="e-form-item-tips" a:if="{{field.tips}}">{{field.tips}}</view>
         <view class="e-form-item-content">
-            <block a:if="{{field.type === 'input'}}">
-                <input type="text" placeholder="Input" auto-focus />
-            </block>
-            <block a:elif="{{field.type === 'textarea'}}">
-                <textarea placeholder="placeholder" maxlength="200" />
-            </block>
-            <block a:elif="{{field.type === 'checkbox-group'}}">
-                <checkbox-group>
-                    <label class="checkbox" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
-                        <checkbox value="{{option.value || option}}" />{{option.text || option}}                            
-                    </label>
-                </checkbox-group>
-            </block>
-            <block a:elif="{{field.type === 'radio-group'}}">
-                <radio-group>
-                    <label class="radio" a:for="{{field.props.options}}" a:key="*this" a:for-item="option">
-                        <radio value="{{option.value || option}}" />{{option.text || option}}                            
-                    </label>
-                </radio-group>
-            </block>
-            <block a:elif="{{field.type === 'date'}}">
-                <view class="date">
-                    >
-                </view>
-            </block>
-            <block a:elif="{{field.type === 'switch'}}">
-                <view class="switch">
-                    <switch checked color="{{field.props.color || '#41d551'}}" />
-                </view>
-            </block>
-            <block a:elif="{{field.type === 'slider'}}">
-                <view class="slider">
-                    <slider min={{field.props.min}} max={{field.props.max}} step={{field.props.step}} show-value="{{field.props.showValue}}" />
-                </view>
-            </block>
+            <template is="form-item-input" data="{{model, field}}" a:if="{{field.type === 'input'}}" />
+            <template is="form-item-textarea" data="{{model, field}}" a:elif="{{field.type === 'textarea'}}" />
+            <template is="form-item-checkbox-group" data="{{model,field}} "a:elif="{{field.type === 'checkbox-group'}}" />
+            <template is="form-item-radio-group" data="{{model, field}}" a:elif="{{field.type === 'radio-group'}}" />
+            <template is="form-item-picker" data="{{model, field}}" a:elif="{{field.type === 'picker'}}" />
+            <template is="form-item-switch" data="{{model, field}}" a:elif="{{field.type === 'switch'}}" />
+            <template is="form-item-slider" data="{{model, field}}" a:elif="{{field.type === 'slider'}}" />
         </view>
     </view>
 </template>

@@ -2,6 +2,13 @@
     padding: 8px 16px;
 }
 
+.e-form-footer {
+    margin: 16px 0;
+}
+.e-form-footer button + button {
+    margin-top: 16px;
+}
+
 /* group */
 .e-form-group-title {
     color: #444;
@@ -17,7 +24,15 @@
    margin-bottom: 16px;
 }
 .e-form-item-label {
-    padding: 8px 0;
+    margin-bottom: 8px;
+}
+.e-form-item-tips {
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #999;
+    border-left: 4px solid #ddd;
+    background-color: #eee;
 }
 .e-form-item-content {
     
@@ -34,12 +49,18 @@
 .e-form-item-content .checkbox,
 .e-form-item-content .radio {
     display: block;
+    line-height: 1.2;
+}
+.e-form-item-content .checkbox .checkbox-text,
+.e-form-item-content .radio .radio-text {
+    font-size: 34rpx;
 }
 .e-form-item-content .checkbox + .checkbox,
 .e-form-item-content .radio + .radio,
 .e-form-item-content .switch + .switch {
-    margin-top: 10px;
+    margin-top: 20rpx;
 }
+
 .e-form-item-content .slider {
     padding: 0 11px;
 }

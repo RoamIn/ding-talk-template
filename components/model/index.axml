@@ -1,17 +1,22 @@
 <import src="./templates/form-item.axml"/>
 
-<form class="e-form" onSubmit="onSubmit" onReset="onReset">
+<form class="e-form" onSubmit="onSubmit">
   <view class="e-form-group"
     a:for="{{schema.groups}}"
     a:for-item="group"
-    a:key="*this">
+    a:key="form-group-{{index}}">
     <view class="e-form-group-title">{{group.title}}</view>
     <view class="e-form-group-content">
       <template is="form-item"
       a:for="{{group.fields}}"
       a:for-item="field"
-      a:key="*this"
-      data="{{field}}"></template>
+      a:key="form-item-{{index}}"
+      data="{{model, field}}"></template>
     </view>
+  </view>
+
+   <view class="e-form-footer">
+    <button formType="submit" type="primary">Submit</button>
+    <button formType="reset">Reset</button>
   </view>
 </form>

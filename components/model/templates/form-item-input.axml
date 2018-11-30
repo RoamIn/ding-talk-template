@@ -1,3 +1,14 @@
 <template name="form-item-input">
-    <input type="text" placeholder="Input" auto-focus />
+    <input type="text"
+        name="{{field.modelKey || ''}}"
+        data-name="{{field.modelKey || ''}}"
+        value="{{model[field.modelKey]}}"
+        class="{{field.props.class || ''}}"
+        style="{{field.props.style || ''}}"
+        password="{{field.props.type === 'password'}}"
+        maxlength="{{field.props.placeholder || 140}}"
+        placeholder="{{field.props.placeholder || ''}}"
+        focus="{{field.props.autoFocus || false}}"
+        onInput="onInput"
+        />
 </template>

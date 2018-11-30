@@ -1,5 +1,19 @@
 <template name="form-item-slider">
     <view class="slider">
-        <slider min={{field.props.min}} max={{field.props.max}} step={{field.props.step}} show-value="{{field.props.showValue}}" />
+        <slider
+            name="{{field.modelKey || ''}}"
+            data-name="{{field.modelKey || ''}}"
+            value="{{model[field.modelKey]}}"
+            min="{{field.props.min}}"
+            max="{{field.props.max}}"
+            step="{{field.props.step}}"
+            show-value="{{field.props.showValue || false}}"
+            active-color="{{field.props.activeColor || '#108ee9'}}"
+            background-color="{{field.props.backgroundColor || '#ddd'}}"
+            track-size="{{field.props.trackSize || 4}}"
+            handle-size="{{field.props.handleSize || 22}}"
+            handle-color="{{field.props.handleColor || '#fff'}}"
+            onChange="onChange"
+            />
     </view>
 </template>

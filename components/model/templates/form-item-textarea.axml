@@ -1,3 +1,14 @@
 <template name="form-item-textarea">
-    <textarea placeholder="placeholder" maxlength="200" />
+    <textarea
+        name="{{field.modelKey || ''}}"
+        data-name="{{field.modelKey || ''}}"
+        value="{{model[field.modelKey]}}"
+        class="{{field.props.class || ''}}"
+        style="{{field.props.style || ''}}"
+        maxlength="{{field.props.placeholder || 140}}"
+        placeholder="{{field.props.placeholder || ''}}"
+        focus="{{field.props.autoFocus || false}}"
+        auto-height="{{field.props.autoHeight || true}}"
+        onInput="onInput"
+        />
 </template>
