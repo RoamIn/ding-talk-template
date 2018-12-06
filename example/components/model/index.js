@@ -2,10 +2,10 @@ Page({
   data: {
     model: {
       name: 'Jon',
-      gender: 'Male',
+      gender: 0,
       look: 5,
-      nationality: '中国',
-      days: ['Mon', 'Sat', 'Fri'],
+      nationality: 1,
+      days: [0, 4, 5],
       email: 'my@email.com',
       description: 'balabala...'
     },
@@ -67,24 +67,11 @@ Page({
               modelKey: 'nationality',
               type: 'picker',
               props: {
-                rangeKey: 'name',
                 range: [
-                  {
-                    id: 1,
-                    name: '美国'
-                  },
-                  {
-                    id: 2,
-                    name: '中国'
-                  },
-                  {
-                    id: 3,
-                    name: '巴西'
-                  },
-                  {
-                    id: 4,
-                    name: '日本'
-                  }
+                  '美国',
+                  '中国',
+                  '巴西',
+                  '日本'
                 ]
               },
               rules: {

@@ -7,10 +7,10 @@
         <label class="checkbox" a:for="{{field.props.options}}" a:key="label-{{index}}" a:for-item="option">
             <checkbox
                 name="{{field.modelKey || ''}}"
-                value="{{option.value || option}}"
-                checked="{{model[field.modelKey].indexOf(option.value || option) !== -1}}"
+                value="{{index}}"
+                checked="{{model[field.modelKey].indexOf(index) !== -1}}"
                 />
-            <text class="checkbox-text">{{option.text || option}}</text>                                                      
+            <text class="checkbox-text">{{option}}</text>                                                      
         </label>
     </checkbox-group>
 </template>

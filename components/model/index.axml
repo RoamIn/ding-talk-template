@@ -1,6 +1,6 @@
 <import src="./templates/form-item.axml"/>
 
-<form class="e-form" onSubmit="onSubmit">
+<form class="e-form" onSubmit="onSubmit" onReset="onReset">
   <view class="e-form-group"
     a:for="{{schema.groups}}"
     a:for-item="group"

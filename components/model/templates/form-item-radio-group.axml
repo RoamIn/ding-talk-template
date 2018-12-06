@@ -6,8 +6,8 @@
         >
         <label class="radio" a:for="{{field.props.options}}" a:key="label-{{index}}" a:for-item="option">
             <radio
-                value="{{option.value || option}}"
-                checked="{{model[field.modelKey] === (option.value || option)}}"
+                value="{{index}}"
+                checked="{{model[field.modelKey] === index}}"
                 />
             <text class="radio-text">{{option.text || option}}</text>                                             
         </label>

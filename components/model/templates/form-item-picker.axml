@@ -9,7 +9,7 @@
         onChange="onChange"
         >
         <view class="picker">
-            当前选择：{{model[field.modelKey]}}
+            当前选择：{{field.props.range[ model[field.modelKey] ]}}
         </view>
     </picker>
 </template>
